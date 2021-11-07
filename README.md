@@ -1,4 +1,4 @@
-# capstone
+# Capstone Project
 
 There are several different documents all used to get the results for this project.
 There are two files for all the code that was done in SAS and in R.

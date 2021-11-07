@@ -245,3 +245,7 @@ spec_rf <- randomForest(pat_zip_index~., data=train.df, ntree=500, mtry=4, nodes
 varImpPlot(spec_rf, ttype = 1)
 rf_pred <- predict(spec_rf, test.df)
 confusion_matrix(rf_pred, test.df$pat_zip_index)
+
+zip_codes <- final[,c(4,5)]
+final <- transform(final, mrn_index= (final$patient_zip_code-final$zip_code))
+t.test(final$patient_zip_code, final$zip_code)

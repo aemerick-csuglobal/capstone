@@ -90,3 +90,19 @@ proc reg data=MIS543.CAPSTONE_DATA alpha=0.05 plots(only)=(diagnostics
 	run;
 quit;
 
+%web_drop_table(WORK.Zip);
+
+
+FILENAME REFFILE '/home/u49791046/ZIP_CODES.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+	DBMS=CSV
+	OUT=WORK.Zip;
+	GETNAMES=YES;
+RUN;
+
+PROC CONTENTS DATA=WORK.Zip; RUN;
+
+
+%web_open_table(WORK.Zip);
+

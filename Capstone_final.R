@@ -20,8 +20,7 @@ library(sqldf)
 library(neuralnet)
 
 
-#direct <- "C:/Users/emericka/Desktop/Shields"
-desktop <-  "C:/Users/emericka/Desktop"
+desktop <-  "C:/Desktop"
 
 CY19_df <- read_csv("C:/Users/emericka/Desktop/Shields/Combined_df.19.csv")
 CY20_df <- read_csv("C:/Users/emericka/Desktop/Shields/Combined_df.20.csv")
